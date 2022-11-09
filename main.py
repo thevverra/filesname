@@ -3,8 +3,10 @@ from random import randint
 from bs4 import BeautifulSoup as b
 import telebot
 
+#подключение бота
 bot = telebot.TeleBot('5376411642:AAEl1NEVzuih6MxXEKfbYocc-Eey_jKw2Ec', parse_mode=None)
 id = '1347043446'
+#приветствие
 @bot.message_handler(commands=['start', 'help', 'anecdot'])
 def send_welcome(message):
     bot.reply_to(message, 'Прив, хочешь вылечиться от дисперсии? Тогда каждый раз, когда ты не будешь здоров, пиши: "Склеивай". А когда ты поймешь, что тяжелая болезнь тебя покинула, напиши "Спасибо, я склеился"')
